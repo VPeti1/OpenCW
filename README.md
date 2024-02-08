@@ -1,6 +1,6 @@
 # OpenCW
-The linux port of CW-I
-This program uses flatpak so you need to install that separately
+The linux port of CW-I that uses flatpak 
+
 
 # How to set up?
 ## Install flatpak and the flathub repo
