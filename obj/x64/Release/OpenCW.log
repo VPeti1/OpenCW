@@ -1,0 +1,48 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.0.206'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+D:\OpenCW\main.cpp(47,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(47,27): warning :    47 |                     system("flatpak install vlc steam discord peazip -y");
+D:\OpenCW\main.cpp(47,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(54,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(54,27): warning :    54 |                     system("flatpak install googlechrome -y");
+D:\OpenCW\main.cpp(54,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(61,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(61,27): warning :    61 |                     system("flatpak install firefox -y");
+D:\OpenCW\main.cpp(61,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(79,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(79,27): warning :    79 |                     system("flatpak install vlc peazip -y");
+D:\OpenCW\main.cpp(79,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(84,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(84,27): warning :    84 |                     system("flatpak install libreoffice -y");
+D:\OpenCW\main.cpp(84,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(91,31): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(91,31): warning :    91 |                         system("flatpak install googlechrome -y");
+D:\OpenCW\main.cpp(91,31): warning :       |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(98,31): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(98,31): warning :    98 |                         system("flatpak install firefox -y");
+D:\OpenCW\main.cpp(98,31): warning :       |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(115,31): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(115,31): warning :   115 |                         system("flatpak install googlechrome -y");
+D:\OpenCW\main.cpp(115,31): warning :       |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(122,31): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(122,31): warning :   122 |                         system("flatpak install firefox -y");
+D:\OpenCW\main.cpp(122,31): warning :       |                         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(175,23): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(175,23): warning :   175 |                 system(("flatpak install " + input).c_str());
+D:\OpenCW\main.cpp(175,23): warning :       |                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(185,23): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(185,23): warning :   185 |                 system("flatpak install vlc vscode wget peazip -y");
+D:\OpenCW\main.cpp(185,23): warning :       |                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(192,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(192,27): warning :   192 |                     system("flatpak install googlechrome -y");
+D:\OpenCW\main.cpp(192,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\OpenCW\main.cpp(199,27): warning : ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+D:\OpenCW\main.cpp(199,27): warning :   199 |                     system("flatpak install firefox -y");
+D:\OpenCW\main.cpp(199,27): warning :       |                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Linking objects
+  OpenCW.vcxproj -> D:\OpenCW\bin\x64\Release\OpenCW.out
