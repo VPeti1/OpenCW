@@ -19,9 +19,9 @@ Thats it (no, seriously)
 
 # How to compile with g++?
 
-## Download the "OpenCW.cpp" file 
+## Download the "main.cpp" file 
 ## Edit the code to your liking
-## Type in g++ OpenCW.cpp
+## Type in g++ main.cpp
 
 # How to compile with VS?
 
