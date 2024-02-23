@@ -9,11 +9,41 @@
 #define clear std::cout << "\033[2J\033[1;1H";
 using namespace std;
 
+bool checkInternet() {
+    int status = system("ping -c 3 google.com");
+    return (status == 0);
+}
+
+void bs() {
+            std::string input;
+            std::cout << "What browser do you want?: \n";
+            std::cout << "(chrome or firefox) \n";
+            std::cin >> input;
+            if (input == "chrome" || input == "Chrome") {
+                system("flatpak install com.google.chrome -y");
+                std::cout << "Install done \n";
+            }
+            else if (input == "firefox" || input == "Firefox") {
+                system("flatpak install org.mozilla.firefox -y");
+                std::cout << "Install done \n";
+
+            }
+            else {
+                std::cout << "No valid browser name was entered! No browser install will be performed! \n";
+            }
+}
+
+
 int main() {
-    const char* serverToPing = "8.8.8.8";
-    // Execute the ping command
-    int result = std::system(("ping -c 1 " + std::string(serverToPing)).c_str());
-    if (result == 0) {
+    if (checkInternet()) {
+            std::cout << "Internet check passed!" << std::endl;
+        }
+        else {
+            // No internet or admin privileges detected
+            std::cout << "\033[2J\033[1;1H";
+            std::cout << "No internet detected! Retrying" << std::endl;
+            main();
+        }
         std::cout << "\033[2J\033[1;1H";
         //Intro here
         std::cout << " ________  ___       __                  ___     \n";
@@ -29,7 +59,6 @@ int main() {
 
         wait1
             wait1
-            wait1
             std::cout << "\033[2J\033[1;1H";
         std::cout << "Loading: 30% \n";
         wait1
@@ -41,7 +70,7 @@ int main() {
         wait1
             std::cout << "\033[2J\033[1;1H";
         //if exists it runs the program
-        std::cout << "Welcome to CW-I \n";
+        std::cout << "Welcome to OpenCW! \n";
         //Choice maker 2000
         std::string input;
         std::cout << "Please select install type (basic,gamer,custom,developer): \n";
@@ -50,98 +79,30 @@ int main() {
         if (input == "gamer" || input == "Gamer") {
             clear
                 //runs command basic and gamer apps
-                system("flatpak install org.videolan.vlc com.valvesoftware.Steam com.discordapp.Discord io.github.peazip.peazip -y");
-            //browser selector
-            std::string input;
-            std::cout << "What browser do you want?: \n";
-            std::cout << "(chrome or firefox) \n";
-            std::cin >> input;
-            if (input == "chrome" || input == "Chrome") {
-                system("flatpak install com.google.chrome -y");
-                std::cout << "Install done \n";
-
-
+                system("flatpak install org.videolan.VLC  com.valvesoftware.Steam com.discordapp.Discord io.github.peazip.peazip -y");
+                bs();
+                system("read -p 'Press Enter to continue...'");
                 main();
-            }
-            else if (input == "firefox" || input == "Firefox") {
-                system("flatpak install org.mozilla.firefox -y");
-                std::cout << "Install done \n";
-
-
-                main();
-
-            }
-            else {
-                std::cout << "Install done \n";
-
-
-                main();
-            }
 
         }
         else if (input == "basic" || input == "Basic") {
             clear
                 //runs command basic apps
-                system("flatpak install org.videolan.vlc io.github.peazip.peazip -y");
+                system("flatpak install org.videolan.VLC io.github.peazip.PeaZip -y");
             std::string input;
             std::cout << "Do you what libreoffice?: \n";
             std::cin >> input;
             if (input == "yes" || input == "Yes") {
-                system("flatpak install org.libreoffice.libreoffice -y");
-                //install browser
-                std::string input;
-                std::cout << "What browser do you want?: \n";
-                std::cout << "(chrome or firefox) \n";
-                std::cin >> input;
-                if (input == "chrome" || input == "Chrome") {
-                    system("flatpak install com.google.chrome -y");
-                    std::cout << "Install done \n";
-
-
-                    main();
-                }
-                else {
-                    system("flatpak install org.mozilla.firefox -y");
-                    std::cout << "Install done \n";
-
-
-                    main();
-
-                }
-
+                system("flatpak install org.libreoffice.LibreOffice -y");
+                bs();
+                system("read -p 'Press Enter to continue...'");
+                main();
             }
-
             else {
-                //browser selector
-                std::string input;
-                std::cout << "What browser do you want?: ";
-                std::cout << "(chrome or firefox) \n";
-                std::cin >> input;
-                if (input == "chrome" || input == "Chrome") {
-                    system("flatpak install com.google.chrome -y");
-                    std::cout << "Install done ";
-
-
-                    main();
-                }
-                else if (input == "firefox" || input == "Firefox") {
-                    system("flatpak install org.mozilla.firefox -y");
-                    std::cout << "Install done ";
-
-
-                    main();
-
-                }
-                else {
-                    std::cout << "Install done ";
-
-
-                    main();
-                }
-
-
+                bs();
+                system("read -p 'Press Enter to continue...'");
+                main();
             }
-
         }
 
         else if (input == "about" || input == "About") {
@@ -160,17 +121,15 @@ int main() {
             std::cout << "Using CPP \n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
             std::cout << "\033[2J\033[1;1H";
-            std::cout << "Build number v1.1.0 \n";
-            wait1
-                wait1
-
+            std::cout << "Build number v1.2.0 \n";
+            system("read -p 'Press Enter to continue...'");
             main();
 
 
         }
         else if (input == "exit" || input == "Exit") {
             clear
-                std::cout << "Goodbye!";
+                std::cout << "Goodbye! \n";
             wait1
 
         }
@@ -180,8 +139,8 @@ int main() {
             std::cout << "Enter packages name(s): ";
             std::cin >> input;
             system(("flatpak install " + input).c_str());
-
-
+            wait1
+            wait1
             main();
 
 
@@ -189,38 +148,10 @@ int main() {
 
         else if (input == "developer" || input == "Developer") {
             clear
-                system("flatpak install org.videolan.vlc com.visualstudio.code io.github.shiftey.Desktop io.github.peazip.peazip -y");
-            //browser selector
-            std::string input;
-            std::cout << "What browser do you want?: ";
-            std::cout << "(chrome or firefox) \n";
-            std::cin >> input;
-            if (input == "chrome" || input == "Chrome") {
-                system("flatpak install com.google.chrome -y");
-                std::cout << "Install done ";
-
-
-                main();
-            }
-            else if (input == "firefox" || input == "Firefox") {
-                system("flatpak install org.mozilla.firefox -y");
-                std::cout << "Install done ";
-
-
-                main();
-
-            }
-
-
-
-
-            else {
-                std::cout << "Install done ";
-
-
-                main();
-            }
-
+            system("flatpak install org.videolan.VLC  com.visualstudio.code io.github.shiftey.Desktop io.github.peazip.PeaZip -y");
+            bs();
+            system("read -p 'Press Enter to continue...'");
+            main();
         }
 
         else if (input == "update" || input == "Update") {
@@ -233,9 +164,7 @@ int main() {
             system("chmod +x $HOME/OpenCW.out");
             system("$HOME/OpenCW.out");
             std::cout << "Files downloaded to the home directory of the current user\n";
-            wait1
-                wait1
-                wait1
+            system("read -p 'Press Enter to continue...'");
         }
 
         else
@@ -245,14 +174,9 @@ int main() {
             main();
         }
     }
-    else {
-        std::cout << "No internet connection detected.Please rerun the program\n";
-        wait1
-        clear
-        std::cout << "Goodbye!";
-        wait1
-    }
-}
+
+
+
 
 
 

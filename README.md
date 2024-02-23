@@ -23,7 +23,7 @@ Thats it (no, seriously)
 ## Edit the code to your liking
 ## Type in g++ main.cpp
 
-# How to compile with VS?
+# How to compile with VS (DEPRECATED)?
 
 ## Clone this repo
 ## Launch the .sln file
