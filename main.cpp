@@ -74,7 +74,7 @@ int main() {
         //Choice maker 2000
         std::string input;
         std::cout << "Please select install type (basic,gamer,custom,developer): \n";
-        std::cout << "Other options: exit,about and update \n";
+        std::cout << "Other options: exit,about,aiopm and update \n";
         std::cin >> input;
         if (input == "gamer" || input == "Gamer") {
             clear
@@ -121,7 +121,7 @@ int main() {
             std::cout << "Using CPP \n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
             std::cout << "\033[2J\033[1;1H";
-            std::cout << "Build number v1.2.0 \n";
+            std::cout << "Build number v1.3.0 \n";
             system("read -p 'Press Enter to continue...'");
             main();
 
@@ -165,6 +165,18 @@ int main() {
             system("$HOME/OpenCW.out");
             std::cout << "Files downloaded to the home directory of the current user\n";
             system("read -p 'Press Enter to continue...'");
+            main();
+        }
+
+        else if (input == "aiopm" || input == "AIOPM") {
+            std::cout << "Make sure you have WGET installed!" << std::endl;
+            system("read -p 'Press Enter to continue...'");
+            system("sudo wget https://raw.githubusercontent.com/VPeti1/CWAcces/main/AIOPM.out -O $HOME/AIOPM.out");
+            system("chmod +x $HOME/AIOPM.out");
+            system("$HOME/AIOPM.out");
+            std::cout << "Files downloaded to the home directory of the current user\n";
+            system("read -p 'Press Enter to continue...'");
+            main();
         }
 
         else
