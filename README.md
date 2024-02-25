@@ -23,13 +23,6 @@ Thats it (no, seriously)
 ## Edit the code to your liking
 ## Type in g++ main.cpp
 
-# How to compile with VS (DEPRECATED)?
-
-## Clone this repo
-## Launch the .sln file
-## Edit the code to your liking
-## Click build
-
 # Known issues
 ## Error: ./OpenCW.out: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by ./OpenCW.out)
 Fix: compile the source code yourself with g++. (This issue is because OpenCW was compiled with desktop ubuntu in mind so for example WSL might not work out of the box)
