@@ -5,12 +5,12 @@ The linux port of CW-I that uses flatpak
 # How to set up?
 ## Install flatpak and the flathub repo
 Guide at: https://flathub.org/setup
-## Download the latest release 
+## Download the installer.out file or compile it yourself
 ## Make the file executable using chmod
-For exaple: sudo chmod +x OpenCW.out
+For exaple: sudo chmod +x installer.out
 ## Run the file
 For exaple: ./OpenCW.out
-## Enjoy
+## Run OpenCW by typing in 'cw' in the terminal
 
 # What are its system requirements
 
